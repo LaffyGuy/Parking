@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parking_graph"
+    app:startDestination="@id/parkingFragment">
+
+    <action
+        android:id="@+id/action_global_parking_fragment"
+        app:destination="@+id/parkingFragment"
+        app:launchSingleTop="true"/>
+
+    <fragment
+        android:id="@+id/parkingFragment"
+        android:name="com.example.parkingapp.fragments.ParkingFragment"
+        android:label="Parking"
+        tools:layout="@layout/fragment_parking">
+        <action
+            android:id="@+id/action_parkingFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment" />
+        <argument
+            android:name="numbOfPlace"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_parkingFragment_to_bottomSheetParkingFragment"
+            app:destination="@id/bottomSheetParkingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.parkingapp.fragments.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_booking">
+        <action
+            android:id="@+id/action_bookingFragment_to_parkingFragment"
+            app:destination="@id/parkingFragment"
+            app:popUpTo="@id/parkingFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="parkingData"
+            app:argType="com.example.parkingapp.room.data.ParkingData" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetParkingFragment"
+        android:name="com.example.parkingapp.bottomsheetdialog.BottomSheetParkingFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <argument
+            android:name="data"
+            app:argType="com.example.parkingapp.room.data.ParkingData" />
+    </dialog>
+
+</navigation>

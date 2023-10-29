@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegisterFragment">
+
+
+    <LinearLayout
+        android:id="@+id/firstNameLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Ім'я"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_person"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lastNameLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNameLinearLayout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Прізвище"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_person"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/passwordLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastNameLinearLayout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_lock"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLinearLayout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Пошта"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawableLeft="@drawable/ic_email"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numberPlaceLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLinearLayout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnRegisterLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberPlaceLinearLayout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:text="Зареєструватися"
+            android:padding="5dp"
+            android:background="@drawable/button_style"/>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
